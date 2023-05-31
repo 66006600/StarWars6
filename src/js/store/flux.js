@@ -22,6 +22,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			vehicles: [
 
 			],
+			favorites: [
+
+			],
 		},
 
 		actions: {
@@ -60,6 +63,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			agregarFavoritos: (index, tipo) => {
+				
+				const store = getStore()
+				const elemento = store[tipo][index] 
+				setStore({
+					favorites: [...store.favorites, elemento]
+				})
 			}
 		}
 	};

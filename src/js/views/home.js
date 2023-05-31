@@ -30,7 +30,7 @@ export const Home = () => {
 										<h2>{planet.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`}
-											alt={planet.name} width="200"
+											alt={planet.name} width="130"
 										/>
 
 										<p>Population: {planet.population}</p>
@@ -42,7 +42,7 @@ export const Home = () => {
 											<Link to={"/single/" + index}>
 												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
-											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0" onClick={e => actions.agregarFavoritos(index,"planets")}>♡</button>
 										</div>
 									</div>
 								))}
@@ -66,7 +66,7 @@ export const Home = () => {
 										<h2>{character.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
-											alt={character.name} width="200"
+											alt={character.name} width="130"
 										/>
 										<p>Birth Year: {character.birth_year}</p>
 										<p>Gender: {character.gender}</p>
@@ -77,7 +77,7 @@ export const Home = () => {
 											<Link to={"/personaje/" + index}>
 												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
-											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0 " onClick={e=> actions.agregarFavoritos(index,"characters")}>♡</button>
 										</div>
 									</div>
 								))}
@@ -101,7 +101,7 @@ export const Home = () => {
 										<h2>{vehicle.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}
-											alt={vehicle.name} width="200"
+											alt={vehicle.name} width="140"
 										/>
 										<p>Model: {vehicle.model}</p>
 										<p>Manofacturer: {vehicle.manufacturer}</p>
@@ -110,7 +110,7 @@ export const Home = () => {
 											<Link to={"/vehicles/" + vehicle.uid}>
 												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
-											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0" onClick={e=> actions.agregarFavoritos(index,"vehicles")} >♡</button>
 										</div>
 									</div>
 								))}
